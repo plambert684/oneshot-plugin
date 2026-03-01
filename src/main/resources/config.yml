@@ -1,0 +1,59 @@
+# ==========================================
+#         OneShot - Configuration
+#         Design Style: Hypixel-like
+# ==========================================
+
+# Configuration Générale
+bungeecord: false
+return_to_hub: true
+stop_server_at_end: false
+fallback_server: "lobby"
+
+# Configuration de la base de données
+database:
+  type: "sqlite" # options: sqlite, mysql, postgresql
+  host: "localhost"
+  port: 3306
+  database: "oneshot"
+  username: "root"
+  password: ""
+
+# Apparence et Messages
+prefix: "&6&lOneShot &8» "
+
+messages:
+  # Messages de connexion
+  join: "&a{player} &eest arrivé ! &7(&b{count}&7/&b{max}&7)"
+  leave: "&c{player} &ea quitté le jeu."
+  
+  # Messages de jeu
+  game_starting_in: "&eLe jeu commence dans &6{seconds} &esecondes !"
+  not_enough_players: "&cPas assez de joueurs ! Le compte à rebours est annulé."
+  game_start: "&a&lC'est parti ! &eAtteignez &610 kills &epour gagner !"
+  arena_invalid: "&cL'arène n'est pas configurée correctement (spawns manquants)."
+  
+  # Combat
+  player_killed: "&e&lKILL! &7Vous avez éliminé &a{victim}&7."
+  player_died: "&c&lMORT! &7Vous avez été éliminé par &c{killer}&7."
+  player_won: "&6&lGAGNÉ! &a{player} &ea remporté la victoire !"
+  
+  # Erreurs
+  already_in_game: "&cErreur: Vous êtes déjà dans une partie."
+  arena_full: "&cErreur: Cette arène est complète."
+  arena_started: "&cErreur: Le jeu a déjà commencé."
+  arena_not_ready: "&cErreur: L'arène n'est pas prête (manque de spawns)."
+  arena_not_exist: "&cErreur: Cette arène n'existe pas."
+  no_permission: "&cVous n'avez pas la permission d'exécuter cette commande."
+
+# Scoreboard (Style Hypixel)
+scoreboard:
+  title: "&6&lONESHOT"
+  lines:
+    - "&7{date}"
+    - " "
+    - "&fKills: &a{kills}"
+    - "&fJoueurs: &a{players}"
+    - " "
+    - "&fArène: &e{arena}"
+    - " "
+    - "&emc.example.com"

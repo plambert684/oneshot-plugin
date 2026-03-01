@@ -2,3 +2,12 @@ name: OneShot
 version: '1.0-SNAPSHOT'
 main: org.plambert.oneShot.OneShot
 api-version: '1.21'
+commands:
+  oneshot:
+    description: Commande principale du plugin OneShot
+    usage: /oneshot <join|leave|admin>
+    aliases: [os]
+permissions:
+  oneshot.admin:
+    description: Permission pour les commandes d'administration OneShot
+    default: op
